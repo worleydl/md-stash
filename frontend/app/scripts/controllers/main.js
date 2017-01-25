@@ -8,10 +8,14 @@
  * Controller of the mdPadApp
  */
 angular.module('mdPadApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope', 'stash', function ($scope, stash) {
+    $scope.markdown = '';
+
+    stash.get({article: 'home'}).then(function(response) {
+      if(response.content) {
+        $scope.markdown = response.content;
+      } else {
+        $scope.markdown = 'The author has not created a homepage yet.';
+      }
+    });
+  }]);

@@ -36,6 +36,10 @@ angular
         templateUrl: 'views/publish.html',
         controller: 'PublishCtrl'
       })
+      .when('/a/:article', {
+        templateUrl: 'views/a.html',
+        controller: 'ACtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

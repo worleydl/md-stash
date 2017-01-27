@@ -9,6 +9,7 @@
  */
 angular.module('mdPadApp')
   .controller('MainCtrl', ['$scope', 'stash', function ($scope, stash) {
+    $scope.status.ready = false;
     $scope.markdown = '';
 
     stash.get({article: 'home'}).then(function(response) {
@@ -17,5 +18,7 @@ angular.module('mdPadApp')
       } else {
         $scope.markdown = 'The author has not created a homepage yet.';
       }
+
+      $scope.status.ready = true;
     });
   }]);

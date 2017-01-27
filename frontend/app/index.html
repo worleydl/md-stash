@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="mdPadApp">
+  <body ng-app="mdPadApp" ng-controller="RootCtrl" ng-cloak>
     <noscript>The maintainer of this site is insane and you need Javascript enabled to read content.</noscript>
 
     <!--[if lt IE 7]>
@@ -32,7 +32,7 @@
 
       <div ng-view=""></div>
 
-      <div class="footer">
+      <div ng-if="status.ready" class="ngfade footer">
         <p>Powered by mdStash - Blogging for Developers</p>
       </div>
     </div>
@@ -91,6 +91,7 @@
         <script src="scripts/controllers/auth.js"></script>
         <script src="scripts/controllers/publish.js"></script>
         <script src="scripts/controllers/a.js"></script>
+        <script src="scripts/controllers/root.js"></script>
         <!-- endbuild -->
 </body>
 </html>

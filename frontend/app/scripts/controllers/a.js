@@ -9,6 +9,7 @@
  */
 angular.module('mdPadApp')
   .controller('ACtrl', ['$scope', '$routeParams', 'stash', function ($scope, $routeParams, stash) {
+    $scope.status.ready = false;
     $scope.markdown = '';
 
     stash.get({article: $routeParams.article}).then(function(response) {
@@ -17,6 +18,8 @@ angular.module('mdPadApp')
       } else {
         $scope.markdown = 'That article hasn\'t been written yet!';
       }
+
+      $scope.status.ready = true;
     });
 
   }]);

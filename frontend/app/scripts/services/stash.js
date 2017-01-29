@@ -11,7 +11,7 @@ angular.module('mdPadApp')
   .factory('stash', ['$q', '$http', '$cookieStore', function ($q, $http, $cookieStore) {
     var factory = {};
 
-    var API_ENDPOINT = 'http://192.168.1.25:5000/';
+    var API_ENDPOINT = 'http://stash.dlworley.com/';
 
     var API_AUTH = 'token';
     var API_GET  = 'get';

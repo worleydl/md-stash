@@ -10,6 +10,6 @@
 angular.module('mdPadApp')
   .controller('RootCtrl', function ($scope) {
     $scope.status = {
-      ready: true
+      ready: false
     };
   });

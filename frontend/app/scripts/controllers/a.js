@@ -15,8 +15,10 @@ angular.module('mdPadApp')
     stash.get({article: $routeParams.article}).then(function(response) {
       if(response.content) {
         $scope.markdown = response.content;
+        $scope.setPageTitle($routeParams.article);
       } else {
         $scope.markdown = 'That article hasn\'t been written yet!';
+        $scope.setPageTitle('Oops - Article Not Found');
       }
 
       $scope.status.ready = true;

@@ -19,6 +19,7 @@ angular.module('mdPadApp')
         $scope.markdown = 'The author has not created a homepage yet.';
       }
 
+      $scope.setPageTitle('Daniel Worley\'s Blog');
       $scope.status.ready = true;
     });
   }]);

@@ -101,3 +101,10 @@ body {
 .ngfade.ng-enter.ng-enter-active {
     opacity:1;
 }
+
+.article-body img {
+  display: block;
+  margin: 0 auto;
+
+  max-width: 100%;
+}
